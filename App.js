@@ -1,12 +1,29 @@
 import React from "react";
 import {Button, View, ScrollView, StyleSheet } from "react-native";
+import Constants from 'expo-constants';
 
 const App = () => {
   return (<>
+  <View style ={{paddingTop:Constants.statusBarHeight}}></View>
   <View style={[styles.container, styles.playingSpace]}>
+    <Text>글을씁니다.</Text>
+    <Text>글을 또 씁니다.</Text>
+    <Image source={require('./assets/favicon.png')}/>
+    <ImageBackground
+    style={{width:200, height:200}}
+    source={{
+      url: 'https://www.akamai.com/site/im-demo/perceptual-standard.jpg?imbypass=true'
+    }}
+    >
+      <Text>
+      택시업계가 최근 계속된 택시기사 인력 이탈의 주된 원인 중 하나로 현행 월급제 전액관리제로 꼽은 것으로 나타났다.
+
+      </Text>
+    </ImageBackground>
 
   </View>
-  <Scrollview style={[styles.container, styles.controlSpace]}>
+  <Scrollview style={[styles.container]}>
+     <View style = {[controlSpace]}>
     <View style={[styles.buttonView]}>
       <Button title="1"/>
     </View>
@@ -27,6 +44,7 @@ const App = () => {
     </View>
     <View style={[styles.buttonView]}>
      <Button title="7"/>
+    </View>
     </View>
 
 
